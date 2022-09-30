@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/devocionales",
+      "handler": "devocionales.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/devocionales/count",
+      "handler": "devocionales.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/devocionales/:slug",
+      "handler": "devocionales.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/devocionales",
+      "handler": "devocionales.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/devocionales/:id",
+      "handler": "devocionales.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/devocionales/:id",
+      "handler": "devocionales.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

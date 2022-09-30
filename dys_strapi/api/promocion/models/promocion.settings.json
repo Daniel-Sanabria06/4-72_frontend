@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "promocions",
+  "info": {
+    "name": "Promocion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "contenido": {
+      "type": "text",
+      "required": true
+    },
+    "enlace": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

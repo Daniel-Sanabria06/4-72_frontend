@@ -1,0 +1,17 @@
+.listado{
+    display: grid;
+    gap: 3rem;
+}
+@media (min-width: 500px) {
+    .listado{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0rem;
+    }    
+}
+@media (min-width: 992px) {
+    .listado{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0rem;
+    }
+   
+}

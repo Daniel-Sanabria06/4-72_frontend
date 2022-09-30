@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/promocion",
+      "handler": "promocion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/promocion",
+      "handler": "promocion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/promocion",
+      "handler": "promocion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
