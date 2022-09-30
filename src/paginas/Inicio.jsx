@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import Promocion from '../components/Promocion'
 import imagenPredica from "/trigo.jpg"
-import styles from '../styles/Inicio.module.css'
+import styles from '../styles/Inicio.css'
 import imagenLibros from '/imagenLibros.jpg'
 import Spinner from '../components/Spinner'
 
