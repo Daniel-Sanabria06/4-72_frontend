@@ -1,5 +1,4 @@
 import EntradaSermon from "./EntradaSermon"
-import styles from '../styles/Devocionales.module.css'
 import { useState, useEffect } from "react"
 
 const ListadoSermones = () => {
@@ -22,7 +21,7 @@ const ListadoSermones = () => {
 
   return (
     <>
-        <div className={styles.listado}>
+        <div className='grid sm:flex sm:flex-col sm2:gap-12 lg:gap-12 lg:grid-cols-2 lg22:gap-12 lg22:grid-cols-3'>
         {sermon.map( sermon => (
               <EntradaSermon
                 key={sermon.id}
@@ -54,7 +53,7 @@ const ListadoSermonesMax = () => {
 
     return (
       <>
-          <div className={styles.listado}>
+          <div className='grid sm:flex sm:flex-col sm2:gap-12 lg:gap-12 lg:grid-cols-2 lg22:gap-12 lg22:grid-cols-3'>
           {sermon.map( sermon => (
                 <EntradaSermon
                   key={sermon.id}

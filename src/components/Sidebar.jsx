@@ -93,11 +93,12 @@ const sidebar = () => {
                     <Link onClick={Openbar} to='/olvide-password' className="block cursor-pointer p-2 hover:bg-gray-700 text-lg rounded-md mt-1">Cambiar Contraseña</Link>
                     
                   </div>
+              */}
                   <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-sky-600"  onClick={handleCerrarSesion}>
                     <i className="bi bi-box-arrow-in-right" />
                     <span className="text-2xl ml-4 text-gray-200">Cerrar Sesión</span>
                   </div>
-                  */}
+                  
                 </> ) : <>
                     <Link onClick={Openbar}
                       className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-sky-600"

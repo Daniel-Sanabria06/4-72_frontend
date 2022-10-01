@@ -1,4 +1,3 @@
-import styles from '../styles/Nosotros.module.css'
 import { formatearFecha } from "../helpers"
 import ReactMarkdown from 'react-markdown'
 import Spinner from '../components/Spinner'

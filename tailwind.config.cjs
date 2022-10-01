@@ -11,6 +11,12 @@ module.exports = {
       },
       colors: {
         'lime2': '#2ED573',
+        'primary': 'rgb(2 132 199)',
+        'negro': '#262626'
+      },
+      gridTemplateColumns: {
+        '2': 'repeat(2, 1fr)',
+        '3': 'repeat(3, 1fr)',
       },
     },
     screens: {
@@ -20,7 +26,7 @@ module.exports = {
       'xl': {'max': '1279px'},
       // => @media (max-width: 1279px) { ... }
 
-      'lg': {'max': '1023px'},
+      'lg': {'max': '991px'},
       // => @media (max-width: 1023px) { ... }
 
       'md': {'max': '767px'},
@@ -40,13 +46,13 @@ module.exports = {
       'xl2': {'min': '1279px'},
       // => @media (max-width: 1279px) { ... }
 
-      'lg22': {'min': '1023px'},
+      'lg22': {'min': '992px'},
       // => @media (max-width: 1023px) { ... }
 
       'md2': {'min': '767px'},
       // => @media (max-width: 767px) { ... }
 
-      'sm2': {'min': '639px'},
+      'sm2': {'min': '500px'},
     }
   },
   variants: {

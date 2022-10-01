@@ -1,5 +1,4 @@
 import EntradaDevocional from "./EntradaDevocional"
-import styles from '../styles/Devocionales.module.css'
 import { useState, useEffect } from "react"
 
 const ListadoDevocionales = () => {
@@ -22,7 +21,7 @@ const ListadoDevocionales = () => {
 
   return (
     <>
-        <div className={styles.listado}>
+        <div className='grid sm:flex sm:flex-col sm2:gap-12 lg:gap-12 lg:grid-cols-2 lg22:gap-12 lg22:grid-cols-3'>
         {devocional.map( devocional => (
               <EntradaDevocional 
                 key={devocional.id}
@@ -55,7 +54,7 @@ const ListadoDevocionalesMax = () => {
 
       return (
         <>
-            <div className={styles.listado}>
+            <div className='grid sm:flex sm:flex-col sm2:gap-12 lg:gap-12 lg:grid-cols-2 lg22:gap-12 lg22:grid-cols-3'>
             {devocional.map( devocional => (
                   <EntradaDevocional 
                     key={devocional.id}
