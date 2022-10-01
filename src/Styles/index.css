@@ -20,3 +20,43 @@
       font-size: 3rem;
     }
   }
+
+
+  
+.enlace1{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 850;
+  color: var(--blanco);
+  border: 3px solid var(--primary);
+  padding: 0.7rem 2rem;
+  transition-property: background-color;
+  transition-duration: .3s;
+}
+
+.enlace1:hover {
+  background-color: var(--primary);
+  color: var(--blanco);
+}
+
+
+.enlace2{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 850;
+  color: var(--blanco);
+  border: 3px solid #2ED573;
+  padding: 0.7rem 2rem;
+  transition-property: background-color;
+  transition-duration: .3s;
+}
+
+.enlace2:hover {
+  background-color: #2ED573;
+  color: var(--blanco);
+}
+
