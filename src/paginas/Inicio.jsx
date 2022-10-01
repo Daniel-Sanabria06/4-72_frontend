@@ -1,9 +1,9 @@
+import Promocion from '../components/Promocion'
 import useAuth from '../hooks/useAuth'
 import { ListadoDevocionalesMax } from '../components/ListadoDevocionales'
 import { ListadoSermonesMax } from '../components/ListadoSermones'
 import { Link } from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import Promocion from '../components/Promocion'
 import imagenPredica from "/trigo.jpg"
 import imagenLibros from '/imagenLibros.jpg'
 import Spinner from '../components/Spinner'
