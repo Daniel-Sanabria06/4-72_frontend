@@ -9,6 +9,9 @@ module.exports = {
       transitionProperty: {
         left: "left",
       },
+      colors: {
+        'lime2': '#2ED573',
+      },
     },
     screens: {
       '2xl': {'max': '1535px'},

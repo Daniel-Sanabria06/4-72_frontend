@@ -75,11 +75,11 @@ const sidebar = () => {
 
               {auth._id ? (
                 <>
-                  <Link onClick={Openbar} className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-sky-600" to="favoritos">
+                {/* <Link onClick={Openbar} className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-sky-600" to="favoritos">
                     <i className="bi bi-bookmark-heart-fill" />
                     <span className="text-2xl ml-4 text-gray-200">Favoritos</span>
                   </Link>
-                
+                 
                   <div className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-sky-600">
                     <i className="bi bi-person-circle" />
                     <div className="flex justify-between w-full items-center" onClick={dropDown}>
@@ -97,6 +97,7 @@ const sidebar = () => {
                     <i className="bi bi-box-arrow-in-right" />
                     <span className="text-2xl ml-4 text-gray-200">Cerrar Sesión</span>
                   </div>
+                  */}
                 </> ) : <>
                     <Link onClick={Openbar}
                       className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-sky-600"

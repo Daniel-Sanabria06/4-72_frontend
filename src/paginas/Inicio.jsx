@@ -1,4 +1,3 @@
-import styles from '../styles/Inicio.module.css'
 import useAuth from '../hooks/useAuth'
 import { ListadoDevocionalesMax } from '../components/ListadoDevocionales'
 import { ListadoSermonesMax } from '../components/ListadoSermones'
@@ -60,10 +59,10 @@ const Inicio = ({devocional, sermon}) => {
           <div className="rounded-xl z-50  cursor-pointer absolute to-transparent bg-gradient-to-r inset-x-0 my-6 sm:my-2 text-white flex-row"> 
           
                   <h1 className="font-bold text-5xl sm:text-3xl my-5 capitalize">Libros Cristianos</h1>
-                  <p className={` text-lg w-[35rem] sm:w-[20rem] mx-auto my-8 font-bold ${styles.resumen}`}>
+                  <p className={` text-lg w-[35rem] sm:w-[20rem] mx-auto my-8 font-bold `}>
                    Libros, folletos, compendios de diversos temas y estudios bíblicos, además de libros de sermones y bosquejos para predicar
                   </p>
-                  <a className={`rounded-lg w-[15rem] mx-auto ${styles.enlace1}`} target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/-/es/Gonzalo-Sanabria/e/B00ZYMPTSC">
+                  <a className={`block uppercase font-bold border-solid border-2 border-sky-600 py-2 hover:bg-sky-600 rounded-lg w-[15rem] mx-auto`} target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/-/es/Gonzalo-Sanabria/e/B00ZYMPTSC">
                       Ver Libros
                   </a>      
                     
@@ -95,14 +94,14 @@ const Inicio = ({devocional, sermon}) => {
         </Link>  
 
         <div className='mt-10 container mx-auto'>
-        <div target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/user/GonzaloSanabria/videos' className={`${styles.contenido} shadow-xl  h-[20rem] z-0 w-[5rem]aspect-video cursor-pointer rounded-xl relative group`}>
+        <div target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/user/GonzaloSanabria/videos' className={` shadow-xl  h-[20rem] z-0 w-[5rem]aspect-video cursor-pointer rounded-xl relative group`}>
           <div className="rounded-xl z-50  cursor-pointer absolute to-transparent bg-gradient-to-t inset-x-0 my-12 sm:my-2 text-white flex-row"> 
           
                   <h1 className="font-bold text-5xl my-5 capitalize">Prédicas en video</h1>
-                  <p className={` text-lg w-[25rem] sm:w-[20rem] mx-auto my-8 font-bold ${styles.resumen}`}>
+                  <p className={` text-lg w-[25rem] sm:w-[20rem] mx-auto my-8 font-bold `}>
                   Sermones en video que edificarán y fortalecerán tu fe en Cristo Jesús.
                   </p>
-                  <a className={`rounded-lg w-[15rem] mx-auto ${styles.enlace2}`} target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/user/GonzaloSanabria/videos'>
+                  <a className={`block uppercase font-bold border-solid border-2 border-lime2 py-2 hover:bg-lime2  rounded-lg w-[15rem] mx-auto`} target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/user/GonzaloSanabria/videos'>
                       Ver Prédicas
                   </a>      
                     

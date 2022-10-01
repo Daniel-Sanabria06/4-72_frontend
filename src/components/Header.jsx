@@ -1,4 +1,3 @@
-import styles from '../styles/Header.module.css'
 import { Link } from 'react-router-dom'
 import useAuth from '../hooks/useAuth';
 import Sidebar from './Sidebar';
