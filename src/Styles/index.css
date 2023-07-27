@@ -8,6 +8,10 @@
   --blanco: #FFF;
 }
 
+body {
+  font-family: Nunito, sans-serif;
+}
+
   [class*="heading"] {
     font-size: 3.5rem;
     text-align: center;
@@ -22,4 +26,67 @@
   }
 
 
-  
+  .paginainst {
+    background-color: #FFC72C;
+    color: #1F4592;
+    border-radius: 10px;
+  }
+
+  .cosoAmarillo {
+    background-color: #FFC72C;
+    border-radius: 10px;
+    
+  }
+
+  .textoAmarillo {
+    font-size: 35px;
+    text-align: start;
+    font-weight: 700;
+    color: #0033a0;
+  }
+
+  .botonRojo{
+    background-color: rgb( 243, 4, 55); 
+  }
+
+  .footer {
+    background-color: #002D7C;
+  }
+
+  .textoFooter {
+    font-size: 30px;
+    text-align: left;
+    color: #c1c1c1;
+    font-weight: 700;
+  }
+
+  .cajonFooter {
+    font-size: 20px;
+    text-align: left;
+    color: #9a9a9a;
+    font-weight: 500;
+  }
+
+  .tituloBanco {
+    font-weight: 700;
+  }
+
+  .fondoAmarillo{
+    background-color: #FFC72C;
+  }
+
+  .cosoAzul {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #002D7C;
+  }
+
+   .cosoAzul2 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #002D7C;
+  }
+
+  .botonFinal {
+    margin-bottom: 100%;
+  }

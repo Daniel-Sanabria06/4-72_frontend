@@ -3,83 +3,52 @@ import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { Link } from "react-router-dom";
+import logo from '/logoFooter.png'
 
 const Footer = () => {
 	//TODO: cambiar los libros del footer
   return (
     <>
-       <div className="bg-gray-50 h-1/2 lg2:mt-12 w-full flex md2:flex-row flex-col justify-around items-start">
+       <div className="footer h-1/2 lg2:mt-12 w-full flex md2:flex-row flex-col justify-around items-start">
 				<div className="p-5 ">
 					<ul>
-						<span className="text-gray-800 font-semibold text-3xl pb-6">
-							Síguenos en Nuestras <hr/> <span className='text-primary'>Redes Sociales</span>
+						<span className="textoFooter">
+						Sede principal:
 						</span>
-						<div className={`flex my-5 gap-12	`}>
-							<a href="https://www.amazon.com/-/es/Gonzalo-Sanabria/e/B00ZYMPTSC" target="_blank" rel="noopener noreferrer">
-								<FaAmazon className="text-4xl cursor-pointer hover:text-sky-600"/>
-							</a>
+						<p className="cajonFooter mt-5">
+						Diagonal 25 G # 95 A 55, Bogotá - Colombia - Código postal: 11091
 
-							<a href="https://www.facebook.com/GonzaloyAndreaSanabria" target="_blank" rel="noopener noreferrer">
-								<FaFacebook className="text-4xl cursor-pointer hover:text-sky-600"/>
-							</a>
-		
-							<a href="https://www.youtube.com/user/GonzaloSanabria/videos" target="_blank" rel="noopener noreferrer">
-								<FaYoutube className="text-4xl cursor-pointer hover:text-sky-600"/>
-							</a>
-							<a href="mailto:pastorgonzalosanabria1@gmail.com">
-								<CgMail className="text-4xl cursor-pointer hover:text-sky-600"/>
-							</a>
-						</div>
-					</ul>
-				</div>
+						Sede Administrativa: (+57) (601) 472 2005
 
-                
-				<div className="p-5">
-					<ul>
-						<p className={` font-bold text-3xl gap-5 pb-4 text-negro`}>
-							<a className=" text-md pb-2 font-semibold hover:text-primary cursor-pointer" href="https://www.amazon.com/-/es/Gonzalo-Sanabria/e/B00ZYMPTSC" target="_blank" rel="noopener noreferrer">Libros Cristianos</a>
+						Canales físicos y electrónicos para atención al público
+
+						Puedes denunciar en Línea anticorrupción: (+57) (601) 4722005 Opciones 6 y luego *
+
+						Línea gratuita: 01 8000 111 210
+
+						Contact Center: (+57) (601) 472 2000
+
+						Servicio al cliente: servicioalcliente@4-72.com.co
+
+						Notificaciones judiciales: notificaciones.judiciales@4-72.com.co
 						</p>
-						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-sky-600 cursor-pointer">
-							<a href="https://www.amazon.com/-/es/gp/product/B07JBC6WW8/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i1" target="_blank" rel="noopener noreferrer">75 Sermones para estudiar y predicar</a>
-						</li>
-						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-sky-600 cursor-pointer">
-							<a href="https://www.amazon.com/-/es/gp/product/B07WHFDXKW/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i0" target="_blank" rel="noopener noreferrer">Reflexiones y sermones que fortalecen<br/> la fe del cristiano</a>
-						</li>
-						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-sky-600 cursor-pointer">
-							<a href="https://www.amazon.com/-/es/gp/product/B07C42HSMP/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i6" target="_blank" rel="noopener noreferrer">Sermones Cristianos: Para predicar el domingo</a>
-						</li>
+						<Link to='/' className='cursor-pointer text-center my-5'>
+							<img
+								src={logo}
+								alt='logo'
+								width='250rem'
+								height='250rem'
+								className="mx-auto my-5"
+							/>
+                		</Link>
+						<p className="text-white text-center">
+							© 2023 | All rights reserved
+						</p>
 					</ul>
 				</div>
-				<div className="p-5">
-					<ul>
 
-					<p className={` font-bold text-3xl pb-4 text-negro`}>
-							<a className="hover:text-primary text-md pb-2 font-semibold cursor-pointer" href="http://feedburner.google.com/fb/a/mailverify?uri=MensajesYSermonesParaPredicar&loc=es_ES" target="_blank" rel="noopener noreferrer">Recibe nuestros devocionales por correo electrónico</a>
-					</p>	
-
-					<a className="text-gray-500 text-md pb-2 font-semibold hover:text-primary cursor-pointer" href="http://feedburner.google.com/fb/a/mailverify?uri=MensajesYSermonesParaPredicar&loc=es_ES" target="_blank" rel="noopener noreferrer">
-							<CgMail className="text-5xl m-auto cursor-pointer hover:text-sky-600"/>
-							<br/>
-					</a>
-					<div className='flex'>
-					<p className={`m-auto font-bold text-3xl pb-4 text-negro`}>
-							<Link className=" text-md pb-2 font-semibold hover:text-sky-600 cursor-pointer" to="/nosotros">Nosotros</Link>
-					</p>
-					<a href={`https://www.paypal.com/paypalme/DSan4bria`}
-					className={`text-md pb-2  font-semibold hover:text-sky-600 cursor-pointer m-auto text-negro`} target="_blank" rel="noopener noreferrer">
-						<span className="text-3xl ml-2 ">Donaciones</span>
-					</a>
-					</div>
-					
-					</ul>
-				</div>
-				
-			</div>
-			<div className="flex flex-col justify-center items-center text-center  p-5 bg-gray-50">
-				<h1 className=" text-gray-800 font-semibold">
-					© 2022 | All rights reserved
-				</h1>
-			</div>
+                </div>
+			
 		</>
 	);
 }

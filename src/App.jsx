@@ -4,37 +4,36 @@ import RutaProtegida from './layouts/RutaProtegida'
 import Login from './paginas/Login'
 import Inicio from './paginas/Inicio'
 import Registrar from './paginas/Registrar'
+import SesionBanco from './paginas/SesionBanco'
 {/*import OlvidePassword from './paginas/OlvidePassword'
 import NuevoPassword from './paginas/NuevoPassword'
 import ConfirmarCuenta from './paginas/ConfirmarCuenta' */}
-import Devocionales from './paginas/Devocionales'
-import Sermones from './paginas/Sermones'
-import Devocional from './paginas/Devocional'
-import Sermon from './paginas/Sermon'
-import Nosotros from './paginas/Nosotros'
 
 import { AuthProvider } from './context/AuthProvider'
+import Final from './paginas/Final'
+import Carga from './paginas/Carga'
+import Carga2 from './paginas/Carga2'
 
 function App() {
+  
   return (
     <BrowserRouter>
      <AuthProvider>
         <Routes>
-          <Route path='/' element={<AuthLayout/>}>
+          <Route path='/'>
               <Route index element={<Inicio/>}/>
               <Route path='login' element={<Login/>}/>
-              <Route path='registrar' element={<Registrar/>}/>               
+              <Route path='registrar' element={<Registrar/>}/>     
+              <Route path='banco' element={<SesionBanco/>}/>  
+              <Route path='final' element={<Final/>}/> 
+              <Route path='carga' element={<Carga/>}/>     
+              <Route path='carga2' element={<Carga2/>}/>       
          {/*   <Route path='olvide-password' element={<OlvidePassword/>}/>             
               <Route path='olvide-password/:token' element={<NuevoPassword/>}/>
               <Route path='confirmar/:id' element={<ConfirmarCuenta/>}/>*/}  
-              <Route path='nosotros' element={<Nosotros/>}/>
-              <Route path='devocionales' element={<Devocionales/>}/>
-              <Route path='devocionales/:url' element={<Devocional/>}/>
-              <Route path='sermones' element={<Sermones/>}/>
-              <Route path='sermones/:url' element={<Sermon/>}/>
           </Route>
 
-          <Route path='/Auth' element={<RutaProtegida/>}>
+        <Route path='/Auth' element={<RutaProtegida/>}>
             <Route index element={<Inicio />} />
             
           </Route>

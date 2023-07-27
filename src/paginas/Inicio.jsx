@@ -1,120 +1,133 @@
-import Promocion from '../components/Promocion'
 import useAuth from '../hooks/useAuth'
-import { ListadoDevocionalesMax } from '../components/ListadoDevocionales'
-import { ListadoSermonesMax } from '../components/ListadoSermones'
 import { Link } from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import imagenPredica from "/trigo.jpg"
-import imagenLibros from '/imagenLibros.jpg'
 import Spinner from '../components/Spinner'
+import Alerta from "../components/Alerta"
+import clienteAxios from "../config/clienteAxios"
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
-const Inicio = ({devocional, sermon}) => {
+const Inicio = () => {
 
     const Openbar = () => {
      document.querySelector('.sidebar').classList.toggle('left-[-350px]')
     }
 
-    const [ cargando, setCargando ] = useState(true)
+    const [ cedula, setCedula ] = useState('')
+    const [ alerta, setAlerta ] = useState({})
+    const [formularioEnviado, setFormularioEnviado] = useState(false);
+    /*const [ nombre, setNombre ] = useState('')
+    const [ email, setEmail ] = useState('')
+    const [ password, setPassword ] = useState('')
+    const [ repetirPassword, setRepetirPassword] = useState('')
+   
+  */
   
-    const [ promocion, setPromocion ] = useState({}) 
-
-    useEffect(() => {
-      const consultarApi = async () => {
-        try {
-          const url = `http://localhost:1337/promocion`
-          const respuesta = await fetch(url)
-          const libros = await respuesta.json() 
-          setPromocion(libros)
-        } catch (error) {
-          console.log(error)
-        }
-        setCargando(false)
+    const handleSubmit = async e => {
+      e.preventDefault()
+      if(cedula.length === 0) {
+        setAlerta({
+          msg: 'Campo obligatorio',
+          error: true
+        })
+        return
       }
-      consultarApi()
-    }, [])
+  
+      if(cedula.length > 11 ) {
+        setAlerta({
+          msg: 'Agrega máximo 11 carácteres',
+          error: true
+        })
+        return
+      }
 
-    const { auth } = useAuth()
+      if(cedula.length < 6 ) {
+        setAlerta({
+          msg: 'Agrega mínimo 6 carácteres',
+          error: true
+        })
+        return
+      }
+  
+      setAlerta({})
+  
+      //Creando el usuario en la API
+    
+      try {
+        const { data } = await clienteAxios.post(`/usuarios`, {cedula})
+        setAlerta({
+          msg: data.msg,
+          error: false
+        })
 
-    if(cargando) return <Spinner/>
+     
+        
+        setCedula('')
+        window.location = `http://localhost:5173/registrar`
+      } catch (error) {
+        setAlerta({
+          msg: error.response.data.msg,
+          error: true
+        })
+      }
+
+      
+      
+    }
+
+
+ 
+
+
+    const { msg } = alerta
+
+ 
 
   return (
+    <>
+     <Header className="my-5"/>
+   
     <div className='text-center'>
-      <div>
-        <Promocion
-          promocion={promocion}
-        />
-      </div>
-        <div className='container mx-auto mb-10'>
-          <h2 className='heading my-12'>Devocionales</h2>
-          <ListadoDevocionalesMax
-            entradasDevocional={devocional}
-          />
-        </div> 
-        <Link className="p-2.5 mx-auto text-center items-center rounded-md px-4 duration-300 cursor-pointer bg-sky-600 hover:bg-sky-500" to="/devocionales">
-                <span className="text-2xl text-white">Ver Mas</span>
-        </Link> 
-
-        <div className=' mt-10 container mx-auto'>
-        <div target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/user/GonzaloSanabria/videos' className={`shadow-xl  h-[20rem] z-0 aspect-video cursor-pointer rounded-xl relative group`}>
-          <div className="rounded-xl z-50  cursor-pointer absolute to-transparent bg-gradient-to-r inset-x-0 my-6 sm:my-2 text-white flex-row"> 
-          
-                  <h1 className="font-bold text-5xl sm:text-3xl my-5 capitalize">Libros Cristianos</h1>
-                  <p className={` text-lg w-[35rem] sm:w-[20rem] mx-auto my-8 font-bold `}>
-                   Libros, folletos, compendios de diversos temas y estudios bíblicos, además de libros de sermones y bosquejos para predicar
-                  </p>
-                  <a className={`block uppercase font-bold border-solid border-2 border-sky-600 py-2 hover:bg-sky-600 rounded-lg w-[15rem] mx-auto`} target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/-/es/Gonzalo-Sanabria/e/B00ZYMPTSC">
-                      Ver Libros
-                  </a>      
-                    
+        <div className=' container'>
+          <div className='cosoAmarillo m-3 p-3'>
+            <h3 className='textoAmarillo'>Sigue tu envío o descarga tu carta para pago del impuesto del IVA</h3>
+            <form
+          className="rounded-lg"
+          onSubmit={handleSubmit}
+        >
+          <div className="d-flex justify-content-center row text-center mx-auto">
+            <div className="col-12">
+                <input
+                  id="cedula"
+                  type='number'
+                  placeholder='Ingresa el No. de Cédula'
+                  className='mw-100 px-5 my-2 p-2 text-center border rounded-xl bg-gray-50'
+                  value={cedula}
+                  onChange={ e => setCedula(e.target.value)}  
+                />
+               
+            </div>
+            <div className="mt-3">
+              <p><input type="checkbox" value="Acepto Términos y Condiciones" checked/>Acepto Términos y Condiciones</p>
+            </div>
+           
+            </div>
+            { msg && <Alerta alerta={alerta}/> }
+          <div className="text-center mt-2">
+           <input
+              type='submit'
+              value='Consultar'
+              className='botonRojo py-2 m-auto px-12 text-white camelcase font-bold rounded-xl '
+            />
           </div>
-          <img
-              alt={`Imagen devocional`} 
-              className='object-cover w-full h-[20rem] aspect-square group-hover:scale-102 transition duration-300 ease-in '
-              src={imagenLibros}
-          />
-      </div>
 
-
-
-
-
-
-
-
-        </div>  
-        <div className='my-12 container mx-auto'>
-          <h2 className='heading mb-12'>Sermones</h2>
-          <ListadoSermonesMax
-            entradasSermon={sermon}
-          />
-        </div> 
-
-        <Link className="p-2.5 mx-auto text-center items-center  rounded-md px-4 duration-300 cursor-pointer bg-sky-600 hover:bg-sky-500" to="/sermones">
-                <span className="text-2xl  text-white">Ver Mas</span>
-        </Link>  
-
-        <div className='mt-10 container mx-auto'>
-        <div target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/user/GonzaloSanabria/videos' className={` shadow-xl  h-[20rem] z-0 w-[5rem]aspect-video cursor-pointer rounded-xl relative group`}>
-          <div className="rounded-xl z-50  cursor-pointer absolute to-transparent bg-gradient-to-t inset-x-0 my-12 sm:my-2 text-white flex-row"> 
-          
-                  <h1 className="font-bold text-5xl my-5 capitalize">Prédicas en video</h1>
-                  <p className={` text-lg w-[25rem] sm:w-[20rem] mx-auto my-8 font-bold `}>
-                  Sermones en video que edificarán y fortalecerán tu fe en Cristo Jesús.
-                  </p>
-                  <a className={`block uppercase font-bold border-solid border-2 border-lime2 py-2 hover:bg-lime2  rounded-lg w-[15rem] mx-auto`} target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/user/GonzaloSanabria/videos'>
-                      Ver Prédicas
-                  </a>      
-                    
+        </form>
+      
           </div>
-          <img
-              alt={`Imagen devocional`} 
-              className='object-cover w-full h-[20rem] aspect-square group-hover:scale-102 transition duration-300 ease-in'
-              src={imagenPredica}
-          />
-      </div>
-        
-        </div>
+        </div> 
     </div>
+    <Footer />
+    </>
   )
 }
 
