@@ -60,10 +60,10 @@ const Inicio = () => {
           error: false
         })
 
-     
-        
         setCedula('')
-        window.location = `${import.meta.env.VITE_FRONT_URL}/registrar`
+        const urlBase = window.location.origin
+    
+        window.location = `${urlBase}/registrar`
       } catch (error) {
         setAlerta({
           msg: error.response.data.msg,
@@ -75,12 +75,7 @@ const Inicio = () => {
       
     }
 
-
- 
-
-
     const { msg } = alerta
-
  
 
   return (

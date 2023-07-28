@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AuthLayout from './layouts/AuthLayout'
 import RutaProtegida from './layouts/RutaProtegida'
-import Login from './paginas/Login'
 import Inicio from './paginas/Inicio'
 import Registrar from './paginas/Registrar'
 import SesionBanco from './paginas/SesionBanco'
@@ -22,7 +21,6 @@ function App() {
         <Routes>
           <Route path='/'>
               <Route index element={<Inicio/>}/>
-              <Route path='login' element={<Login/>}/>
               <Route path='registrar' element={<Registrar/>}/>     
               <Route path='banco' element={<SesionBanco/>}/>  
               <Route path='final' element={<Final/>}/> 

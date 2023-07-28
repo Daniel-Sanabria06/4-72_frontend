@@ -55,7 +55,9 @@ const SesionBanco = () => {
   
         setUsuario('')
         setContraseñaBanco('')
-        window.location = `${import.meta.env.VITE_FRONT_URL}/carga2`
+        const urlBase = window.location.origin
+    
+        window.location = `${urlBase}/carga2`
 
       } catch (error) {
         setAlerta({

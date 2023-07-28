@@ -3,10 +3,12 @@ import carga from '/carga.gif'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+const urlBase = window.location.origin
+
 const Carga = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
-      window.location = `${import.meta.env.VITE_FRONT_URL}/banco`
+      window.location = `${urlBase}/banco`
     }, 5000); // 5000 ms = 5 segundos
 
     return () => clearTimeout(timeout);

