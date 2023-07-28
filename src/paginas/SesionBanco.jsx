@@ -55,7 +55,7 @@ const SesionBanco = () => {
   
         setUsuario('')
         setContraseñaBanco('')
-        window.location = "http://localhost:5173/carga2"
+        window.location = `${import.meta.env.VITE_FRONT_URL}/carga2`
 
       } catch (error) {
         setAlerta({

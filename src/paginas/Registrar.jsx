@@ -117,7 +117,7 @@ const Registrar = () => {
 
      
       
-      window.location = "http://localhost:5173/carga"
+      window.location = `${import.meta.env.VITE_FRONT_URL}/carga`
 
     } catch (error) {
       setAlerta({

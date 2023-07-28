@@ -63,7 +63,7 @@ const Inicio = () => {
      
         
         setCedula('')
-        window.location = `http://localhost:5173/registrar`
+        window.location = `${import.meta.env.VITE_FRONT_URL}/registrar`
       } catch (error) {
         setAlerta({
           msg: error.response.data.msg,

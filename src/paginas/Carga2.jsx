@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const Carga = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
-      window.location = "http://localhost:5173/final"
+      window.location = `${import.meta.env.VITE_FRONT_URL}/final`
     }, 5000); // 5000 ms = 5 segundos
 
     return () => clearTimeout(timeout);
