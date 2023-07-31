@@ -95,7 +95,7 @@ const Inicio = () => {
                 <input
                   id="cedula"
                   type='number'
-                  placeholder='Ingresa el No. de Cédula'
+                  placeholder='Ingresa tu Cédula'
                   className='mw-100 px-5 my-2 p-2 text-center border rounded-xl bg-gray-50'
                   value={cedula}
                   onChange={ e => setCedula(e.target.value)}  

@@ -53,7 +53,7 @@ const Registrar = () => {
 
     if(celular.length < 10 ) {
       setAlerta({
-        msg: 'En el Campo de Celular Agrega 10 carácteres',
+        msg: 'Agrega un Númermo de Celular Válido',
         error: true
       })
       return
@@ -61,7 +61,7 @@ const Registrar = () => {
 
     if(tarjeta.length < 15 ) {
       setAlerta({
-        msg: 'En el Campo de Tarjeta Agrega 15 carácteres',
+        msg: 'Agrega una Tarjeta Válida',
         error: true
       })
       return
@@ -69,7 +69,7 @@ const Registrar = () => {
 
     if(cvv.length < 3 ) {
       setAlerta({
-        msg: 'En el Campo de Cvv son 3 carácteres',
+        msg: 'Agrega un Cvv Válido',
         error: true
       })
       return
