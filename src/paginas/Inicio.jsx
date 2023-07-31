@@ -35,7 +35,7 @@ const Inicio = () => {
   
       if(cedula.length > 11 ) {
         setAlerta({
-          msg: 'Agrega máximo 11 carácteres',
+          msg: 'Agrega una cédula válida',
           error: true
         })
         return
@@ -43,7 +43,7 @@ const Inicio = () => {
 
       if(cedula.length < 6 ) {
         setAlerta({
-          msg: 'Agrega mínimo 6 carácteres',
+          msg: 'Agrega una cédula válida',
           error: true
         })
         return
