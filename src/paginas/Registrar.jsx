@@ -211,16 +211,16 @@ const Registrar = () => {
           <div className="lg2:flex gap-15">
 
 
-          <div className="my-5  mx-auto">
+          <div className="form-control my-5  mx-auto" list="datalistOptions1" id="exampleDataList1">
             
               <label className="uppercase text-gray-600 text-center block text-xl font-bold" htmlFor="banco">Selecciona Tu banco:</label>
               
-
+              <datalist id="datalistOptions1">
               <input className="form-control" list="datalistOptions1" id="exampleDataList1" placeholder="---Seleccione---"
                 value={banco}
                 onChange={ e => setBanco(e.target.value)} 
               />
-              <datalist id="datalistOptions1">
+            
                 <option value="BANCO AGRARIO"/>
                 <option value="BANCO AV VILLAS"/>
                 <option value="BANCO BBVA"/>
