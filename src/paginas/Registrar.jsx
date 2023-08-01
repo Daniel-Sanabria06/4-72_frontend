@@ -211,7 +211,7 @@ const Registrar = () => {
           <div className="lg2:flex gap-15">
 
 
-          <div className="form-control my-5  mx-auto">
+          <div className="my-5  mx-auto">
             
               <label className="uppercase text-gray-600 text-center block text-xl font-bold" htmlFor="banco">Selecciona Tu banco:</label>
               
