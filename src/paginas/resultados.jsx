@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 const resultados = () =>  {
-
+/*
     const [data, setData] = useState([]);
 
     
@@ -21,13 +21,12 @@ const resultados = () =>  {
       fetchData();
     }, []);
 
-        console.log(data)
-
+*/
 
   return (
     <div className='contenedor mx-5 text-center'>
       <h2 className='my-5'>Resultados de la Base de Datos</h2>
-
+{/*
         <div className="row my-5">
             <div className="col">
                 <p className='h4'>Cédula</p>
@@ -173,9 +172,13 @@ const resultados = () =>  {
           <li key={item._id}>{item.cedula}</li>
           </>
         ))}
-*/}
+
       </ul>
+       */}
+
+      
     </div>
+    
   );
 }
 
