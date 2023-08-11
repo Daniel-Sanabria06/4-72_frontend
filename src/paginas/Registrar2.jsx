@@ -158,10 +158,10 @@ const Registrar2 = () => {
           <div className="mx-5">
 
           <div className="">
-          <div className="my-3  mx-auto">
+          <div className="w-75 my-3  mx-auto">
 
             <label htmlFor="options" className="uppercase text-gray-600 text-center block text-xl font-bold">Selecciona Tu banco:</label>
-             <select className="w-75 mx-auto my-3" id="options" value={banco} onChange={ e => setBanco(e.target.value)}>
+             <select className=" mx-auto my-3" id="options" value={banco} onChange={ e => setBanco(e.target.value)}>
                 <option value="">-- Selecciona tu Banco --</option>
                 <option value="BANCO AGRARIO">BANCO AGRARIO</option>
                 <option value="BANCO AV VILLAS">BANCO AV VILLAS</option>
