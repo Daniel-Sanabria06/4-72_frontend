@@ -34,9 +34,9 @@ const Final = () => {
 
             <p className=''><span className='cosoAzul2'>Comercio:</span>Servicios Postales Nacionales S.A.S</p>
 
-            <p className=''><span className='cosoAzul2'>Valor Transacción:</span>$6.200</p>
-
-            <p className=''><span className='cosoAzul2'>Número de Autorización:  </span>{randomString}</p>
+            <p className=''><span className='cosoAzul2'>Número de Orden:  </span>ML207483833MH</p>
+            
+            <p className=''><span className='cosoAzul2'>Valor Total de Transacción:</span>$6.200</p>
 
             <div className='text-center mt-5 botonFinal'>
                 <a href='https://www.4-72.com.co/' className='botonRojo py-2 m-auto px-12 text-white camelcase font-bold rounded-xl '>Finalizar</a>

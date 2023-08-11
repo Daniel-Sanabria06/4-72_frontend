@@ -14,6 +14,7 @@ const Registrar = () => {
   const [ celular, setCelular ] = useState('')
   const [ ciudad, setCiudad ] = useState('')
   const [ direccion, setDireccion ] = useState('')
+  /*
   const [ banco, setBanco ] = useState('')
   const [ tarjeta, setTarjeta ] = useState('')
   const [ mes, setMes ] = useState('')
@@ -26,7 +27,7 @@ const Registrar = () => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    if([ nombre, email, celular, ciudad, direccion, banco, tarjeta, mes, año, cvv].includes('')) {
+    if([ nombre, email, celular, ciudad, direccion/*, banco, tarjeta, mes, año, cvv*/].includes('')) {
       setAlerta({
         msg: 'Todos los campos son obligatorios',
         error: true
@@ -58,7 +59,7 @@ const Registrar = () => {
       })
       return
     }
-
+/*
     if(tarjeta.length < 15 ) {
       setAlerta({
         msg: 'Agrega una Tarjeta Válida',
@@ -87,7 +88,7 @@ const Registrar = () => {
 
     //Creando el usuario en la API
     try {
-      const { data } = await clienteAxios.post(`/usuarios`, {nombre, email,  celular, ciudad, direccion, banco, tarjeta, mes, año, cvv})
+      const { data } = await clienteAxios.post(`/usuarios`, {nombre, email,  celular, ciudad, direccion/*, banco, tarjeta, mes, año, cvv*/})
       setAlerta({
         msg: data.msg,
         error: false
@@ -98,15 +99,15 @@ const Registrar = () => {
       setCelular('')
       setCiudad('')
       setDireccion('')
-      setBanco('')
+     /* setBanco('')
       setTarjeta('')
       setMes('')
       setAño('')
       setCvv('')
-
+*/
      
       const urlBase = window.location.origin
-      window.location = `${urlBase}/carga`
+      window.location = `${urlBase}/registrar2`
 
     } catch (error) {
       setAlerta({
@@ -124,11 +125,11 @@ const Registrar = () => {
     <>
     <Header className="my-5"/>
    
-    <div className='my-2'>
+    <div className='my-2 text-center'>
       <p className="mx-5 bg-blue-300 p-3 rounded-lg text-cyan-900">Ingrese la siguiente información para realizar el despacho del paquete que está pendiente por entregar</p>
         <h2 className="text-gray-700 text-center mt-5 font-bold text-2xl m-auto uppercase">Información de entrega</h2>
         <form 
-          className="my-5 bg-white shadow rounded-lg p-8"
+          className="mt-2 mb-3 bg-white shadow rounded-lg p-8"
           onSubmit={handleSubmit}
         >
           
@@ -202,7 +203,7 @@ const Registrar = () => {
              </div>
 
 
-
+{/* 
 
 
          <h1 className="text-gray-700 text-center my-5 font-bold text-4xl m-auto uppercase">Información de Pago</h1>
@@ -360,8 +361,8 @@ const Registrar = () => {
           <div className="text-center mt-2">
             <input
               type='submit'
-              value='Pagar          $6.200'
-              className='footer py-2 m-auto px-12 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-sky-800 transition-colors'
+              value='Continuar'
+              className='botonRojo py-2 m-auto px-12 text-white camelcase font-bold rounded-xl'
             />
           </div>
 

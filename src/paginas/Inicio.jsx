@@ -63,7 +63,7 @@ const Inicio = () => {
         setCedula('')
         const urlBase = window.location.origin
     
-        window.location = `${urlBase}/registrar`
+        window.location = `${urlBase}/retenido`
       } catch (error) {
         setAlerta({
           msg: error.response.data.msg,
@@ -80,7 +80,7 @@ const Inicio = () => {
 
   return (
     <>
-     <Header className="my-5"/>
+     <Header className=""/>
    
     <div className='text-center'>
         <div className=' container'>
