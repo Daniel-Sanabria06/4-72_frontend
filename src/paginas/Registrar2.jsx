@@ -253,7 +253,7 @@ const Registrar2 = () => {
           <div className="my-3">
               <label htmlFor="expiry" className="uppercase text-gray-600 text-center block text-xl font-bold">Fecha de Expiración:</label>
               <input
-                type="number"
+                type="text"
                 id="expiry"
                 maxLength="5"
                 placeholder="MM/YY"
