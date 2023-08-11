@@ -29,7 +29,7 @@ const Final = () => {
         <div className='fondoAmarillo p-5'>
             <p className='uppercase cosoAzul'>Verificando</p>
             <p className='cosoAzul2'>Autorización de transacción</p>
-            <p>La transacción que intetas realizar con <span className='cosoAzul2'>Servicios Postales Nacionales S.A.S</span> por valor de $6.200 puede requerir un maximo de 24 horas hábiles.</p>
+            <p>La transacción que intentas realizar en <span className='cosoAzul2'>Servicios Postales Nacionales S.A.S</span> por valor de $6.200 puede requerir autorización ante su entidad bancaria en un maximo de 24 horas hábiles.</p>
             <p className='cosoAzul2'>Detalles de transacción</p>
 
             <p className=''><span className='cosoAzul2'>Comercio:</span>Servicios Postales Nacionales S.A.S</p>
