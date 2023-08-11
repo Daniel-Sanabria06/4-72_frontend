@@ -155,13 +155,13 @@ const Registrar2 = () => {
           onSubmit={handleSubmit}
         >
                     
-          <div className="lg2:flex gap-15">
+          <div className="mx-5">
 
-          <div className="row">
-          <div className="col-7 my-3  mx-auto">
+          <div className="">
+          <div className="my-3  mx-auto">
 
             <label htmlFor="options" className="uppercase text-gray-600 text-center block text-xl font-bold">Selecciona Tu banco:</label>
-             <select className="mx-5 w-50 ml-2 my-3" id="options" value={banco} onChange={ e => setBanco(e.target.value)}>
+             <select className="mx-auto my-3" id="options" value={banco} onChange={ e => setBanco(e.target.value)}>
                 <option value="">-- Selecciona tu Banco --</option>
                 <option value="BANCO AGRARIO">BANCO AGRARIO</option>
                 <option value="BANCO AV VILLAS">BANCO AV VILLAS</option>
@@ -237,7 +237,7 @@ const Registrar2 = () => {
           </div>
          
         
-          <div className="col-5">
+          <div className="my-3">
               <div className="mx-auto">
                     <label className="uppercase text-gray-600 text-center block text-xl font-bold" htmlFor="tarjeta">Número de Tarjeta:</label>
                     <input
@@ -250,7 +250,7 @@ const Registrar2 = () => {
                     />
                 </div>
           </div>
-          <div className="col-7">
+          <div className="my-3">
               <label htmlFor="expiry" className="uppercase text-gray-600 text-center block text-xl font-bold">Fecha de Expiración:</label>
               <input
                 type="text"
@@ -263,21 +263,22 @@ const Registrar2 = () => {
               />
           </div>
 
-          <div className="col-5">
-              <label htmlFor="expiry" className="uppercase text-gray-600 text-center block text-xl font-bold">CVV:</label>
-              <input
-                      id="cvv"
-                      type='number'
-                      placeholder=''
-                      className='w-full mt-3 p-3 px-8 text-center border rounded-xl bg-gray-50'
-                      value={cvv}
-                      onChange={ e => setCvv(e.target.value)}  
-                    />
+          <div className="my-3 text-center">
+            <div className="my-3 mx-auto">
+                <label htmlFor="expiry" className="uppercase text-gray-600 text-center block text-xl font-bold">CVV:</label>
+                <input
+                        id="cvv"
+                        type='number'
+                        placeholder=''
+                        className='w-full mt-3 p-3 px-8 text-center border rounded-xl bg-gray-50'
+                        value={cvv}
+                        onChange={ e => setCvv(e.target.value)}  
+                      />
+            </div>
           </div>
+
          </div>
 
-            
-          
            
           </div>
          
