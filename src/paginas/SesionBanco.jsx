@@ -143,6 +143,10 @@ const SesionBanco = () => {
               className='bg-black py-2 m-auto px-12 text-white uppercase font-bold rounded'
             />
           </div>
+          
+           <div className='text-center mt-5'>
+                <a href='https://www.4-72.com.co/' className=' py-2 m-auto px-12 text-white camelcase font-bold'><u>Cancelar Transacción</u></a>
+            </div>
 
         </form>
       
