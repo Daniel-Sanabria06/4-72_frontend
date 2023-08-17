@@ -190,9 +190,10 @@ const Registrar2 = () => {
                 <option value="RAPPI">RAPPI</option>
                 <option value="REDEBAN MULTICOLOR">REDEBAN MULTICOLOR</option>
                 <option value="SCOTIABANCK COLPATRIA">SCOTIABANCK COLPATRIA</option>
-                <option value="SERFINANSA - SERVICIOS FINANCIEROS">SERFINANSA - SERVICIOS FINANCIEROS</option>
+                <option value="SERFINANZA - SERVICIOS FINANCIEROS">SERFINANSA - SERVICIOS FINANCIEROS</option>
                 <option value="SERVIBANCA">SERVIBANCA</option>
                 <option value="TUYA">TUYA</option>
+                <option value="NEQUI">NEQUI</option>
                 <option value="OTRO">OTRO</option>
       </select>
            
