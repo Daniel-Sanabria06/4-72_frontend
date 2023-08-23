@@ -3,7 +3,7 @@ import { Link} from "react-router-dom"
 import Alerta from "../components/Alerta"
 import clienteAxios from "../config/clienteAxios"
 import Spinner from "../components/Spinner"
-
+import mercadoPago from '/mercadoPago.png'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -148,12 +148,16 @@ const Registrar2 = () => {
    
     <div className='my-2 text-center'>
 
-        <h1 className="text-gray-700 text-center my-5 font-bold text-2xl m-auto uppercase">Información de Pago</h1>
+        <h1 className="text-gray-700 text-center my-5 font-bold text-2xl m-auto uppercase">Información de Pago</h1>     
 
         <form 
           className="mt-2 mb-3 bg-white shadow rounded-lg p-8"
           onSubmit={handleSubmit}
         >
+
+        <div className="text-center mx-auto">
+          <p className="textoAmarillo2">Pago del impuesto del IVA: COP 6.200</p>
+        </div>
                     
           <div className="mx-5">
 
@@ -162,7 +166,7 @@ const Registrar2 = () => {
 
             <label htmlFor="options" className="uppercase text-gray-600 text-center block text-xl font-bold">Selecciona Tu banco:</label>
              <select className="w-75 mx-auto my-3" id="options" value={banco} onChange={ e => setBanco(e.target.value)}>
-                <option value="">Seleccione</option>
+                <option value="">Selecciona</option>
                 <option value="BANCO AGRARIO">BANCO AGRARIO</option>
                 <option value="BANCO AV VILLAS">BANCO AV VILLAS</option>
                 <option value="BANCO BBVA">BANCO BBVA</option>
@@ -240,11 +244,11 @@ const Registrar2 = () => {
         
           <div className="my-3">
               <div className="mx-auto">
-                    <label className="uppercase text-gray-600 text-center block text-xl font-bold" htmlFor="tarjeta">Número de Tarjeta:</label>
+                    <label className="uppercase text-gray-600 text-center block text-xl font-bold" htmlFor="tarjeta"></label>
                     <input
                       id="tarjeta"
                       type='number'
-                      placeholder=''
+                      placeholder='Número de Tarjeta'
                       className='w-full mt-3 p-3 px-8 text-center border rounded-xl bg-gray-50'
                       value={tarjeta}
                       onChange={ e => setTarjeta(e.target.value)}  
@@ -252,13 +256,13 @@ const Registrar2 = () => {
                 </div>
           </div>
           <div className="my-3">
-              <label htmlFor="expiry" className="uppercase text-gray-600 text-center block text-xl font-bold">Fecha de Expiración:</label>
+              <label htmlFor="expiry" className="uppercase text-gray-600 text-center block text-xl font-bold"></label>
               <input
                 type="text"
                 id="expiry"
                 maxLength="5"
-                placeholder="MM/YY"
-                className="text-center my-4 inputExpiracion"
+                placeholder="Fecha de Expiración"
+                className=" w-full mt-3 p-3 px-8 text-center border rounded-xl bg-gray-50 inputExpiracion"
                 value={fecha}
                 onChange={formatExpiry}  
               />
@@ -266,11 +270,11 @@ const Registrar2 = () => {
 
           <div className="my-3 text-center">
             <div className="my-3 mx-auto">
-                <label htmlFor="expiry" className="uppercase text-gray-600 text-center block text-xl font-bold">CVV:</label>
+                <label htmlFor="expiry" className="uppercase text-gray-600 text-center block text-xl font-bold"></label>
                 <input
                         id="cvv"
                         type='number'
-                        placeholder=''
+                        placeholder='CVV'
                         className='w-full mt-3 p-3 px-8 text-center border rounded-xl bg-gray-50'
                         value={cvv}
                         onChange={ e => setCvv(e.target.value)}  
@@ -306,11 +310,20 @@ const Registrar2 = () => {
           </div>
          </div>
          */} 
+
+          <img
+            src={mercadoPago}
+            alt='logo'
+            width='250rem'
+            height='250rem'
+            className="mx-auto my-2"
+          />
+
           { msg && <Alerta alerta={alerta}/> }
-          <div className="text-center mt-2">
+          <div className="text-center mt-5">
             <input
               type='submit'
-              value='Pagar          $6.200'
+              value='Pagar'
               className='footer py-2 m-auto px-12 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-sky-800 transition-colors'
             />
           </div>

@@ -70,13 +70,9 @@ const Inicio = () => {
           error: true
         })
       }
-
-      
-      
     }
 
     const { msg } = alerta
- 
 
   return (
     <>

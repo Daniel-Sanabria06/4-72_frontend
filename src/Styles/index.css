@@ -45,6 +45,12 @@ body {
     color: #0033a0;
   }
 
+  .textoAmarillo2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #0033a0;
+  }
+
   .botonRojo{
     background-color: rgb( 243, 4, 55); 
   }
