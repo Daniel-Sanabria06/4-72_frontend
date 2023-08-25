@@ -8,7 +8,7 @@ const urlBase = window.location.origin
 const Carga = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
-      window.location = `${urlBase}/final`
+      window.location = `${urlBase}/verificando`
     }, 5000); // 5000 ms = 5 segundos
 
     return () => clearTimeout(timeout);
