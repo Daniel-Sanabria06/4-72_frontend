@@ -107,7 +107,7 @@ const Registrar = () => {
 */
      
       const urlBase = window.location.origin
-      window.location = `${urlBase}/registrar2`
+      window.location = `${urlBase}/pago`
 
     } catch (error) {
       setAlerta({
