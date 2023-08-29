@@ -44,13 +44,6 @@ const Registrar = () => {
     }
 */
 
-    if(nombre.length > 15 ) {
-      setAlerta({
-        msg: 'Nombre muy largo, agrega máximo 15 caracteres',
-        error: true
-      })
-      return
-    }
 
     if(celular.length < 10 ) {
       setAlerta({
