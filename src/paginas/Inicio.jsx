@@ -92,7 +92,7 @@ const Inicio = () => {
                   id="cedula"
                   type='number'
                   placeholder='Ingresa tu Cédula'
-                  className='mw-100 px-5 my-2 p-2 text-center border rounded-xl bg-gray-50'
+                  className='mw-100 px-4 my-2 p-2 text-center border rounded-xl bg-gray-50'
                   value={cedula}
                   onChange={ e => setCedula(e.target.value)}  
                 />
