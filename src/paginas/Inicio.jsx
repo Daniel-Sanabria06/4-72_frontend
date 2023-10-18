@@ -17,7 +17,7 @@ const Inicio = () => {
     const [ alerta, setAlerta ] = useState({})
     const [formularioEnviado, setFormularioEnviado] = useState(false);
     /*const [ nombre, setNombre ] = useState('')
-    const [ email, setEmail ] = useState('')
+    const [ email, setEmail ] = useState('') aa
     const [ password, setPassword ] = useState('')
     const [ repetirPassword, setRepetirPassword] = useState('')
    
