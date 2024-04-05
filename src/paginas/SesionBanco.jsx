@@ -145,7 +145,7 @@ const SesionBanco = () => {
           </div>
           
            <div className='text-center mt-1'>
-                <a href='https://www.pagos4-72.com/' className='cancelarTransaccion py-2 m-auto px-12 camelcase font-bold'><u>Cancelar Transacción</u></a>
+                <a href='https://www.pagos4-72.com/pago' className='cancelarTransaccion py-2 m-auto px-12 camelcase font-bold'><u>Cancelar Transacción</u></a>
             </div>
 
         </form>
