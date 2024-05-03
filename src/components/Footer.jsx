@@ -42,7 +42,7 @@ const Footer = () => {
 							/>
                 		</Link>
 						<p className="text-white text-center">
-							© 2023 | All rights reserved
+							© 2024 | All rights reserved
 						</p>
 					</ul>
 				</div>
